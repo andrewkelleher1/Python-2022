@@ -1,0 +1,74 @@
+
+
+######################################################
+
+# Function for multiplication or division 
+
+def multiplication_or_sum(num1, num2):
+    # calculate product of two number
+    product = num1 * num2
+    # check if product is less then 1000
+    if product <= 1000:
+        return product
+    else:
+        # product is greater than 1000 calculate sum
+        return num1 + num2
+
+result = multiplication_or_sum(11, 12)
+
+print("The result is:", result)
+
+
+######################################################
+
+#Print loop of current number and previous
+i = 0 
+for i in range(0,10):
+    print("Currnet number", i, "Previous number", i-1, "Sum:" , i+i-1)
+    i = i+1
+
+######################################################
+
+# Print every second letter for a given word 
+
+word = input('Enter word')
+
+size = len(word)
+
+for i in range(0, size-1, 2):
+    print(i, word[i])
+
+
+######################################################
+
+def remove_chars(word, n):
+    print('Original string:', word)
+    x = word[n:]
+    return x
+
+print("Removing characters from a string")
+print(remove_chars("pynative", 4))
+print(remove_chars("pynative", 2))
+
+
+
+######################################################
+
+#Check if the first and last number of a list is the same
+
+
+number_x = [10, 20, 30, 40, 10]
+number_y = [75, 65, 35, 75, 30]
+
+def first_last_same(num_list):
+    first_num = num_list[0]
+    last_num = num_list[-1]
+    
+    if first_num == last_num:
+        return True
+    else:
+        return False
+
+print(first_last_same(number_x))
+
+print(first_last_same(number_y))
